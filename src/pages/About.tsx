@@ -22,10 +22,14 @@ const team = [
   {
     name: 'Uyiranban S',
     role: 'Founder',
+    image: '/team-uyiranban.jpg',
+    imagePosition: 'object-top'
   },
   {
     name: 'Hariharan B',
     role: 'Founder',
+    image: '/team-hariharan.jpg',
+    imagePosition: 'object-[60%_20%]'
   },
 ];
 
@@ -99,10 +103,18 @@ const About = () => {
           <div className="flex flex-wrap justify-center gap-8">
             {team.map((member) => (
               <div key={member.name} className="text-center">
-                <div className="h-24 w-24 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-foreground">
-                    {member.name.split(' ').map(n => n[0]).join('')}
-                  </span>
+                <div className="h-24 w-24 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center mx-auto mb-4 overflow-hidden">
+                  {member.image ? (
+                    <img
+                      src={member.image}
+                      alt={member.name}
+                      className={`h-full w-full object-cover ${member.imagePosition || 'object-center'}`}
+                    />
+                  ) : (
+                    <span className="text-2xl font-bold text-primary-foreground">
+                      {member.name.split(' ').map(n => n[0]).join('')}
+                    </span>
+                  )}
                 </div>
                 <h3 className="font-semibold text-lg">{member.name}</h3>
                 <p className="text-sm text-muted-foreground">{member.role}</p>
