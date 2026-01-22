@@ -44,7 +44,7 @@ export const TextReveal = ({ text, className = "", delay = 0, gradient = false }
     return (
         <motion.span
             ref={ref}
-            style={{ display: "inline-block", overflow: "hidden", paddingBottom: "0.2em", marginBottom: "-0.2em" }}
+            style={{ display: "inline-block", overflow: "hidden", paddingBottom: "0.4em", marginBottom: "-0.3em" }}
             variants={container}
             initial="hidden"
             animate={isInView ? "visible" : "hidden"}

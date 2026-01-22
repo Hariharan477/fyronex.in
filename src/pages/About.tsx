@@ -23,13 +23,15 @@ const team = [
     name: 'Uyiranban S',
     role: 'Founder',
     image: '/team-uyiranban.jpg',
-    imagePosition: 'object-top'
+    imagePosition: 'object-[35%_10%]',
+    scale: 'scale-125'
   },
   {
     name: 'Hariharan B',
     role: 'Founder',
     image: '/team-hariharan.jpg',
-    imagePosition: 'object-[60%_20%]'
+    imagePosition: 'object-[60%_20%]',
+    scale: 'scale-100'
   },
 ];
 
